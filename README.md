@@ -90,15 +90,6 @@ and Software 2IC at the **Perth Aerospace Student Team**. I like building reliab
 - **Perth Aerospace Student Team — Software 2IC:** oversee 10+ software engineers across 5 concurrent projects; migrated the team from simple standups to a full agile methodology, and run recruitment — interviewing and onboarding new members each semester.
 - **IMC Prosperity 4:** built shared backtesting tooling so the team could iterate on trading algorithms quickly.
 
-## 📊 GitHub stats
-
-<div align="center">
-
-![Devon's GitHub stats](https://github-readme-stats.vercel.app/api?username=devon-clarkk&show_icons=true&hide_border=true)
-![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=devon-clarkk&layout=compact&hide_border=true)
-
-</div>
-
 ## 💼 Currently
 
 - 🔭 Building a **persistent, graph-based agentic AI memory system** (private for now) — plus CurtinHonestly and a few others
