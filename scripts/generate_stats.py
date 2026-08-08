@@ -76,10 +76,14 @@ query($login: String!, $from: DateTime!, $to: DateTime!) {
 """
 
 # The portrait's ink is the data ink, so every graphic reads as one material.
+# `head` is the section-heading ink, kept separate from `emph`: GitHub serves
+# these SVGs so that on a dark page the *default* (non-media) palette is what
+# shows, so the heading default must stay legible on BOTH backgrounds (a mid
+# grey), while the dark media bumps it to crisp white where it is honoured.
 LIGHT = dict(data="#6e7681", emph="#424a53", dim="#8c959f",
-             rule="#d8dee4", surface="#ffffff")
+             rule="#d8dee4", surface="#ffffff", head="#6e7681")
 DARK = dict(data="#c9d1d9", emph="#f0f6fc", dim="#8b949e",
-            rule="#30363d", surface="#0d1117")
+            rule="#30363d", surface="#0d1117", head="#ffffff")
 # JBMono is the inlined subset below; the rest is a fallback for the unlikely
 # case a renderer ignores the embedded face.
 MONO = ("JBMono,ui-monospace,SFMono-Regular,Menlo,Consolas,"
@@ -252,6 +256,7 @@ def style(extra="", font=None):
     def block(t):
         return (f".d-f{{fill:{t['data']}}}.d-s{{stroke:{t['data']}}}"
                 f".e-f{{fill:{t['emph']}}}.m-f{{fill:{t['dim']}}}"
+                f".h-f{{fill:{t['head']}}}"
                 f".u-s{{stroke:{t['rule']}}}.r{{stroke:{t['surface']}}}")
     return (f"<style>{font or font_text()}"
             f"{block(LIGHT)}.w{{fill:{LIGHT['data']};opacity:.13}}{extra}"
@@ -417,7 +422,10 @@ def draw_heading(word):
     H = 26
     text_end = len(word) * FS * 0.6 + 18
     p = [head(WIDTH, H, font=font_head())]
-    p.append(label(0, 18, word, FS, "e-f", extra=' font-weight="600"'))
+    # class h-f (not e-f): a mid grey that stays legible on GitHub's dark page
+    # even when the dark media query is not honoured, and goes crisp white when
+    # it is. See the LIGHT/DARK `head` note above.
+    p.append(label(0, 18, word, FS, "h-f", extra=' font-weight="600"'))
     p.append(f'<line x1="{text_end:.0f}" y1="12.5" x2="{WIDTH}" y2="12.5" '
              f'class="u-s" stroke-width="1"/>')
     p.append("</svg>")
