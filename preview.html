@@ -1,0 +1,45 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>profile preview</title>
+<style>
+  body { margin: 0; font: 14px system-ui, sans-serif; }
+  .pane { padding: 28px 20px 40px; }
+  .light { background: #ffffff; color: #24292f; }
+  .dark  { background: #0d1117; color: #c9d1d9; color-scheme: dark; }
+  h2 { font-weight: 600; opacity: .6; margin: 0 0 16px; }
+  .row { display: block; margin: 10px 0; }
+  img.portrait { width: 460px; }
+  img.wide { width: 620px; max-width: 100%; }
+  hr { border: 0; border-top: 1px dashed #8884; margin: 24px 0; }
+</style>
+<!--
+  Local preview of just the generated SVGs, in the real section order. Both
+  panes render them through <img>, exactly how GitHub embeds them in a README:
+  the only context that reveals a missing glyph (squeezed grid) or an
+  external-fetch failure. The dark pane forces color-scheme:dark so the
+  prefers-color-scheme media queries flip. (This shows the graphics only; the
+  full README with text is what GitHub renders.)
+-->
+<script>
+  const svgs = [
+    ['portrait','ascii.svg'],
+    ['wide','stats.svg'],
+    ['hr'],
+    ['wide','hd-about.svg'], ['wide','hd-education.svg'], ['wide','hd-awards.svg'],
+    ['wide','hd-stack.svg'], ['wide','hd-projects.svg'], ['wide','hd-leadership.svg'],
+    ['wide','hd-now.svg'], ['wide','hd-stats.svg'], ['wide','hd-about-this-page.svg'],
+    ['hr'],
+    ['wide','streak.svg'], ['wide','langs.svg'], ['wide','year.svg'],
+  ];
+  for (const cls of ['light','dark']) {
+    const pane = document.createElement('div');
+    pane.className = 'pane ' + cls;
+    pane.innerHTML = '<h2>' + cls + '</h2>';
+    for (const item of svgs) {
+      if (item[0] === 'hr') { pane.insertAdjacentHTML('beforeend','<hr>'); continue; }
+      pane.insertAdjacentHTML('beforeend',
+        '<div class="row"><img class="' + item[0] + '" src="./' + item[1] + '"></div>');
+    }
+    document.body.appendChild(pane);
+  }
+</script>
