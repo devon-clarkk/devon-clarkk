@@ -52,7 +52,7 @@ Led a team of 5 to first in the most competitive category, building a visualisat
 **Intern Poster Showcase Award, ACS WA Tech Summit 2026**<br>
 For ["How can we prove an agentic AI system is accurate enough to trust?"](https://membership.acs.org.au/member-insight/2026-06-30-ACS-WA-Tech-Summit-2026.html)
 
-**Letters of Commendation, Dean of Engineering and Science** &nbsp;·&nbsp; <samp>every semester (S1 2024, S2 2024, S1 2025)</samp>
+**Letters of Commendation, Dean of Engineering & Science** &nbsp;·&nbsp; <samp>awarded every semester from S2 2023 to 2026</samp>
 
 <img src="./hd-stack.svg" width="620" alt="stack"/>
 
