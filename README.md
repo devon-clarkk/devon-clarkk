@@ -30,12 +30,12 @@
 
 > Software Engineering student at Curtin University.<br>
 > Software Engineering Intern at Visagio.<br>
-> Software 2IC at the Perth Aerospace Student Team.
+> Business Lead at the Perth Aerospace Student Team.
 
 I like building reliable systems and shipping real tools with a team. Graduating<br>
-November 2026 (Software Engineering, Curtin University, WAM ~90). Software 2IC at<br>
+November 2026 (Software Engineering, Curtin University, WAM ~90). Business Lead at<br>
 the [Perth Aerospace Student Team](https://github.com/PerthAerospaceStudentTeam),
-leading a 10+ engineer team. Focused on AI<br>
+previously Software 2IC leading a 10+ engineer team. Focused on AI<br>
 engineering: workflow improvements, context engineering, and provably safe,<br>
 reliable systems. Seeking a 2026 graduate software engineering role.
 
@@ -89,10 +89,10 @@ Full-stack platform for anonymous Curtin unit reviews, deployed on Azure with CI
 
 <img src="./hd-leadership.svg" width="620" alt="leadership"/>
 
-**[Perth Aerospace Student Team](https://github.com/PerthAerospaceStudentTeam)** &nbsp;·&nbsp; <samp>Software 2IC</samp><br>
-Oversee 10+ software engineers across 5 concurrent projects; migrated the team<br>
-from standups to full agile; run recruitment, interviewing and onboarding each<br>
-semester.
+**[Perth Aerospace Student Team](https://github.com/PerthAerospaceStudentTeam)** &nbsp;·&nbsp; <samp>Business Lead (previously Software 2IC)</samp><br>
+As Software 2IC, oversaw 10+ software engineers across 5 concurrent projects;<br>
+migrated the team from standups to full agile; ran recruitment, interviewing and<br>
+onboarding each semester.
 
 **IMC Prosperity 4**<br>
 Built shared backtesting tooling so the team could iterate quickly.
@@ -115,24 +115,3 @@ reliable AI systems. Open to 2026 graduate software engineering roles:
 <img src="./year.svg" width="620" alt="The last year, one character per day"/>
 
 </div>
-
-<img src="./hd-about-this-page.svg" width="620" alt="about this page"/>
-
-Every graphic here is generated, not embedded from anyone else's server.<br>
-`ascii.svg` is a photo pushed through a character ramp by<br>
-[`scripts/make_portrait.py`](scripts/make_portrait.py); the stat graphics and<br>
-these section headings are drawn by [a scheduled action](.github/workflows/stats.yml)<br>
-straight from the GitHub GraphQL API, once a day, committing only what changed.
-
-They animate with SMIL inside the SVG, because GitHub strips scripts from<br>
-READMEs, and since nothing loads from a third party, nothing here can<br>
-rate-limit or go dark. The headings are SVGs for the same reason: GitHub also<br>
-strips CSS, so an image is the only way to put this page's own typeface on them.
-
-The typeface is [JetBrains Mono](scripts/fonts), subset to just the characters<br>
-each graphic draws and inlined as base64. That is not only for looks: the<br>
-portrait's grid assumes an advance width of exactly 0.600 em, and a viewer whose<br>
-default monospace is narrower would otherwise see it squeezed.
-
-Language totals cover public repositories only. `year.svg` uses the portrait's<br>
-character ramp: `:` `+` `#` `@`, quiet to loud.

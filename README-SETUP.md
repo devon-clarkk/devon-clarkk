@@ -49,7 +49,7 @@ The exact command used for the shipped portrait (source at
 pip install pillow numpy opencv-python-headless rembg onnxruntime
 
 python3 scripts/make_portrait.py scripts/portrait-source.jpg \
-        --crop 130,178,905,1070 --curve 1.2 --clahe 2.2
+        --crop 240,40,670,600 --curve 1.25 --clahe 2.5
 python3 scripts/embed_portrait_font.py
 ```
 

@@ -46,7 +46,7 @@ DEFAULT_LOGIN = "Devon-Clarkk"                                  # EDIT-ME
 # which glyphs jbmono-head.woff2 must carry, so edit it here and the font
 # subset follows -- no glyph silently falls back to GitHub's sans.
 HEADINGS = ("about", "education", "awards", "stack", "projects",
-            "leadership", "now", "stats", "about this page")
+            "leadership", "now", "stats")
 
 # Two things are pinned for determinism, both learned the hard way:
 #  * the contribution window, to whole UTC days -- otherwise "the past year" is
